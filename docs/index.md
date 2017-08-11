@@ -26,12 +26,12 @@ The above format is similar to HELEN dataset which is used for training the mode
 
 ## [](#header-2)Description of training parameters
 
-> annotations a : (REQUIRED) Path to annotations txt file [example - /data/annotations.txt]
-> config c : (REQUIRED) Path to configuration xml file containing parameters for training.[ example - /data/config.xml]
-> model m :  (REQUIRED) Path to configuration xml file containing parameters for training.[ example - /data/model.dat]
-> width w : (OPTIONAL)  The width which you want all images to get to scale the annotations. Large images are slow to process [default = 460]
-> height h : (OPTIONAL) The height which you want all images to get to scale the annotations. Large images are slow to process [default = 460]
-> face_cascade f (REQUIRED) Path to the face cascade xml file which you want to use as a detector.
+> * annotations a : (REQUIRED) Path to annotations txt file [example - /data/annotations.txt]
+> * config c : (REQUIRED) Path to configuration xml file containing parameters for training.[ example - /data/config.xml]
+> * model m :  (REQUIRED) Path to configuration xml file containing parameters for training.[ example - /data/model.dat]
+> * width w : (OPTIONAL)  The width which you want all images to get to scale the annotations. Large images are slow to process [default = 460]
+> * height h : (OPTIONAL) The height which you want all images to get to scale the annotations. Large images are slow to process [default = 460]
+> * face_cascade f (REQUIRED) Path to the face cascade xml file which you want to use as a detector.
 
 ### [](#header-3)Header 3
 
