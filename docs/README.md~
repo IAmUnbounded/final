@@ -1,17 +1,8 @@
-# Face alignment using OpenCV
+# The Hacker theme
 
 [![Build Status](https://travis-ci.org/pages-themes/hacker.svg?branch=master)](https://travis-ci.org/pages-themes/hacker) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-hacker.svg)](https://badge.fury.io/rb/jekyll-theme-hacker)
 
-* Face alignment is a computer vision technology for identifying the geometric structure of human faces in digital images. Given the location and size of a face, it automatically determines the shape of the face components such as eyes and nose.
-
-The main aim of the project is an implementation of an excellent paper from this year's Computer Vision and Pattern Recognition Conference: One Millisecond Face Alignment with an Ensemble of Regression Trees by Vahid Kazemi and Josephine Sullivan
-
-All discussion regarding the project can be found at opencv face alignment slack channel:
-
-https://open-cv.slack.com/messages/C5HGCM4PR/
-
-I have tried to provide this functionality to OpenCV. This is a tutorial describing how to use it.
-[use it today](#usage).*
+*Hacker is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/hacker), or even [use it today](#usage).*
 
 ![Thumbnail of hacker](thumbnail.png)
 
