@@ -55,7 +55,7 @@ To get more detailed description about the training parameters you can refer to 
 
 ### [](#header-2)Understanding code
 
-For understanding the code jump to this [page](another.md)
+For understanding the code jump to this [page](another.html)
 
 ### [](#header-2)Error rate
 

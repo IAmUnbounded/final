@@ -41,14 +41,14 @@ The configuration file described above which is used while training contains the
 
 **The description of parameters is as follows :**
 
-* **Cascade depth :** This stores the depth of cascade of regressors used for training.
-* **Tree depth :** This stores the depth of trees created as weak learners during gradient boosting.
-* **Number of trees per cascade level :** This stores number of trees required per cascade level.
-* **Learning rate :** This stores the learning rate for gradient boosting.This is required to prevent overfitting using shrinkage.
-* **Oversampling amount :** This stores the oversampling amount for the samples.
-* **Number of test coordinates :** This stores number of test coordinates to be generated as samples to decide for making the split.
-* **Lambda** This stores the value used for calculating the probabilty which helps to select closer pixels for making the split.
-* **Number of test splits :** This stores the number of test splits to be generated before making the best split.
+1. **Cascade depth :** This stores the depth of cascade of regressors used for training.
+2. **Tree depth :** This stores the depth of trees created as weak learners during gradient boosting.
+3. **Number of trees per cascade level :** This stores number of trees required per cascade level.
+4. **Learning rate :** This stores the learning rate for gradient boosting.This is required to prevent overfitting using shrinkage.
+5. **Oversampling amount :** This stores the oversampling amount for the samples.
+6. **Number of test coordinates :** This stores number of test coordinates to be generated as samples to decide for making the split.
+7. **Lambda** This stores the value used for calculating the probabilty which helps to select closer pixels for making the split.
+8. **Number of test splits :** This stores the number of test splits to be generated before making the best split.
 
 
 To get more detailed description about the training parameters you can refer to the [Research paper](https://pdfs.semanticscholar.org/d78b/6a5b0dcaa81b1faea5fb0000045a62513567.pdf).
