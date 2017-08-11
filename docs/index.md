@@ -130,14 +130,14 @@ Consider two images to be used for face swapping as follows :
 
 ![](2830279146_1.jpg)
 
-##[](#header-3)Second image
+## [](#header-3)Second image
 
 ![](100040721_1.jpg)
 
-##[](#header-3)Results after swapping
+## [](#header-3)Results after swapping
 
 ![](Face_swapped.jpg)
 
-### [](#header-2)Understanding code
+## [](#header-2)Understanding code
 
 For understanding the code jump to this [page](another-page2)
