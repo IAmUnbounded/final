@@ -106,7 +106,7 @@ This application lets you detect landmarks of detected faces in a video.This app
 
 ### [](#header-2)Understanding code
 
-For understanding the code jump to this [page](another-page3)
+For understanding the code jump to this [page](another-page1)
 
 # [](#header-1)Face swapping using face landmark detection using OpenCV.
 
@@ -134,5 +134,4 @@ Consider two images to be used for face swapping as follows :
 
 ### [](#header-2)Understanding code
 
-For understanding the code jump to this [page](another-page3)
-
+For understanding the code jump to this [page](another-page2)
