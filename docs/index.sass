@@ -1,0 +1,67 @@
+---
+---
+
+$body: {{ site.style.body }}
+$nav: {{ site.style.nav }}
+$margin: {{ site.style.margin }}
+$padding: {{ site.style.padding }}
+
+html
+  background-color: $nav
+
+body
+  display: flex
+  background-color: $body
+  color: if(lightness($body) > 50%, black, white)
+  font-size: calc(.6vw + .8em)
+  margin: 0 $margin
+  min-height: 100vh
+
+h1, h2, h3, h4, h5, h6
+  font-family: "Gentium Basic"
+  margin: 0.4em 0
+{% if site.style.uppercase %}
+  letter-spacing: 2px
+  text-transform: uppercase
+{% endif %}
+
+nav
+  margin: 1em 0
+  li
+    display: inline-block
+    list-style-type: none
+    margin-right: 2em
+    a
+      font: inherit
+
+article
+  border-top: 1px solid rgba(140, 140, 140, .1)
+  header
+    text-align: center
+    span
+      color: #949494
+  footer
+    padding-left: 0
+
+table
+  width: 100%
+
+footer a
+  font-weight: 300
+
+article, body > header, body > footer
+  padding: 1em calc(#{$padding} - 6.5em)
+
+body > header, body > footer
+  background-color: $nav
+  color: if(lightness($nav) > 50%, black, white)
+
+body > footer
+  display: flex
+  justify-content: space-between
+
+.ghost
+  padding: .4em .8em
+
+.fa
+  margin: 0 0.25em
