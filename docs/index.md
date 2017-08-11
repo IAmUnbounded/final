@@ -122,17 +122,19 @@ This application lets you swap a face in one image with another face in other im
 > * **model** m (REQUIRED) Path to the file containing model to be loaded for face landmark detection.
 > * **face_cascade** f (REQUIRED) Path to the face cascade xml file which you want to use as a face detector.
 
-## [](#header-2)
+## [](#header-2)Results
 
 Consider two images to be used for face swapping as follows :
 
+## [](#header-3)First image
 
+![](2830279146_1.jpg)
 
-**Second image**
+##[](#header-3)Second image
 
 ![](100040721_1.jpg)
 
-**Result after swapping**
+##[](#header-3)Results after swapping
 
 ![](Face_swapped.jpg)
 
