@@ -55,7 +55,7 @@ To get more detailed description about the training parameters you can refer to 
 
 ### [](#header-2)Understanding code
 
-For understanding the code jump to this [page](another.html)
+For understanding the code jump to this [page](another-page)
 
 ### [](#header-2)Error rate
 
@@ -66,4 +66,3 @@ For understanding the code jump to this [page](another.html)
 **The error rate on test images depends on the number of images used for training used as follows :**
 
 ![](test.png)
-
