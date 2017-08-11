@@ -11,7 +11,7 @@ directory containing the images and files containing their corresponding face la
 The dataset consists of .txt files whose first line contains the image name which then follows the annotations.
 The format of the file containing annotations should be of following format :
        
->      	/directory/images/abc.jpg
+>       /directory/images/abc.jpg
 >       123.45,345.65
 >       321.67,543.89
 >       .... , ....
@@ -22,7 +22,7 @@ The above format is similar to HELEN dataset which is used for training the mode
 ```js
 // Command to be typed for running the sample
 ./sample_train_landmark_detector -annotations=/home/sukhad/Downloads/code/trainset/ -config=config.xml -face_cascade=lbpcascadefrontalface.xml -model=trained_model.dat -width=460 -height=460
-``'
+```
 
 ## [](#header-2)Description of training parameters
 
