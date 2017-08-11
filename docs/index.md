@@ -126,9 +126,7 @@ This application lets you swap a face in one image with another face in other im
 
 Consider two images to be used for face swapping as follows :
 
-**First image**
 
-![](28309146.jpg)
 
 **Second image**
 
