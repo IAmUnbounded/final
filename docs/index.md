@@ -10,25 +10,28 @@ directory containing the images and files containing their corresponding face la
 
 The dataset consists of .txt files whose first line contains the image name which then follows the annotations.
 The format of the file containing annotations should be of following format :
-        /directory/images/abc.jpg
-        123.45,345.65
-        321.67,543.89
-        .... , ....
-        .... , ....
+       
+>      	/directory/images/abc.jpg
+>       123.45,345.65
+>       321.67,543.89
+>       .... , ....
+>       .... , ....
        
 The above format is similar to HELEN dataset which is used for training the model.
 
 ```js
 // Command to be typed for running the sample
 ./sample_train_landmark_detector -annotations=/home/sukhad/Downloads/code/trainset/ -config=config.xml -face_cascade=lbpcascadefrontalface.xml -model=trained_model.dat -width=460 -height=460
-```
+``'
 
+## [](#header-2)Description of training parameters
 
-## [](#header-2)Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+> annotations a : (REQUIRED) Path to annotations txt file [example - /data/annotations.txt]
+> config c : (REQUIRED) Path to configuration xml file containing parameters for training.[ example - /data/config.xml]
+> model m :  (REQUIRED) Path to configuration xml file containing parameters for training.[ example - /data/model.dat]
+> width w : (OPTIONAL)  The width which you want all images to get to scale the annotations. Large images are slow to process [default = 460]
+> height h : (OPTIONAL) The height which you want all images to get to scale the annotations. Large images are slow to process [default = 460]
+> face_cascade f (REQUIRED) Path to the face cascade xml file which you want to use as a detector.
 
 ### [](#header-3)Header 3
 

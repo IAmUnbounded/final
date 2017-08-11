@@ -2,17 +2,28 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# [](#header-1)Training face landmark detector
 
-[Link to another page](another-page).
+This application helps to train your own face landmark detector. You can train your own face landmark detection by just providing the paths for
+directory containing the images and files containing their corresponding face landmarks. As this landmark detector was originally trained on
+[HELEN dataset](http://www.ifp.illinois.edu/~vuongle2/helen/), the training follows the format of data provided in HELEN dataset.
 
-There should be whitespace between paragraphs.
+The dataset consists of .txt files whose first line contains the image name which then follows the annotations.
+The format of the file containing annotations should be of following format :
+       
+>      	/directory/images/abc.jpg
+>       123.45,345.65
+>       321.67,543.89
+>       .... , ....
+>       .... , ....
+       
+The above format is similar to HELEN dataset which is used for training the model.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+```js
+// Command to be typed for running the sample
+./sample_train_landmark_detector -annotations=/home/sukhad/Downloads/code/trainset/ -config=config.xml -face_cascade=lbpcascadefrontalface.xml -model=trained_model.dat -width=460 -height=460
+```
 
-# [](#header-1)Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
 ## [](#header-2)Header 2
 
