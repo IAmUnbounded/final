@@ -32,12 +32,11 @@ To use this you have to download and install OpenCV and build it along with cont
 The details for using them are [here](#Tutorial)
 ## Tutorial
 
-### Configuration variables
-
+To understand the usage and code of the samples. Jump [here](https://sukhad-app.github.io/final)
 
 ## Roadmap
 
-See the [pull request](https://github.com/pages-themes/hacker/issues) for discussion regarding various issues (and known issues).
+See the [pull request](https://github.com/opencv/opencv_contrib/pull/1199) for discussion regarding various issues (and known issues).
 
 ## Project philosophy
 
@@ -49,10 +48,10 @@ Please read before starting work on a pull request: https://github.com/opencv/op
 
 Summary of guidelines:
 
-One pull request per issue;
-Choose the right base branch;
-Include tests and documentation;
-Clean up "oops" commits before submitting;
-Follow the coding style guide.
+1. One pull request per issue
+2. Choose the right base branch
+3. Include tests and documentation
+4. Clean up "oops" commits before submitting
+5. Follow the coding style guide.
 
 

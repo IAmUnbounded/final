@@ -40,7 +40,7 @@ See the [pull request](https://github.com/opencv/opencv_contrib/pull/1199) for d
 
 ## Project philosophy
 
-The Hacker theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+This project aims at providing face alignment i.e face landmark detection to OpenCV users.
 
 ## Contributing
 
@@ -48,10 +48,8 @@ Please read before starting work on a pull request: https://github.com/opencv/op
 
 Summary of guidelines:
 
-One pull request per issue;
-Choose the right base branch;
-Include tests and documentation;
-Clean up "oops" commits before submitting;
-Follow the coding style guide.
-
-
+1. One pull request per issue
+2. Choose the right base branch
+3. Include tests and documentation
+4. Clean up "oops" commits before submitting
+5. Follow the coding style guide.
