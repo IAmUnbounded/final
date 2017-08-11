@@ -126,15 +126,15 @@ This application lets you swap a face in one image with another face in other im
 
 Consider two images to be used for face swapping as follows :
 
-## [](#header-3)First image
+### [](#header-3)First image
 
 ![](2830279146_1.jpg)
 
-## [](#header-3)Second image
+### [](#header-3)Second image
 
 ![](100040721_1.jpg)
 
-## [](#header-3)Results after swapping
+### [](#header-3)Results after swapping
 
 ![](Face_swapped.jpg)
 
