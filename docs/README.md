@@ -11,9 +11,9 @@ All discussion regarding the project can be found at opencv face alignment slack
 https://open-cv.slack.com/messages/C5HGCM4PR/
 
 I have tried to provide this functionality to OpenCV. This is a tutorial describing how to use it.
-[use it today](#usage).*
+[use it today](#usage). 
 
-![Thumbnail of hacker](thumbnail.png)
+![Thumbnail of hacker](facereg.jpg)
 
 ## Usage
 
