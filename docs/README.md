@@ -17,22 +17,10 @@ I have tried to provide this functionality to OpenCV. This is a tutorial describ
 
 ## Usage
 
-To use the Hacker theme:
-
-1. Add the following to your site's `_config.yml`:
-
-    ```yml
-    theme: jekyll-theme-hacker
-    ```
-
-2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
-
-    ```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
-
-
-
+The face alignment functionality is provided in OpenCV contrib. 
+To use this you have to download and install OpenCV and build it along with contrib modules.
+Follow this link to install OpenCV along with OpenCV contrib.
+http://docs.opencv.org/trunk/d7/d9f/tutorial_linux_install.html
 ## Customizing
 
 ### Configuration variables
