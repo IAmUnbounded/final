@@ -2,6 +2,8 @@
 layout: default
 ---
 
+![](facereg.jpg)
+
 # [](#header-1)Training face landmark detector
 
 This application helps to train your own face landmark detector. You can train your own face landmark detection by just providing the paths for
