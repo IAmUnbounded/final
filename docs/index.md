@@ -90,7 +90,7 @@ For understanding the code jump to this [page](another-page1)
 
 # [](#header-1)Face landmark detection in a video
 
-         ![](facereg.jpg)
+![](facereg.jpg)
 
 This application lets you detect landmarks of detected faces in a video.This application first detects faces in a current video frame and then finds their facial landmarks. You just have to pass the video as input.	
 
