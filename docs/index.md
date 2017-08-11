@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![](facereg.jpg)
+![](2.jpg)
 
 # [](#header-1)Training face landmark detector
 
@@ -47,7 +47,7 @@ The configuration file described above which is used while training contains the
 4. **Learning rate :** This stores the learning rate for gradient boosting.This is required to prevent overfitting using shrinkage.
 5. **Oversampling amount :** This stores the oversampling amount for the samples.
 6. **Number of test coordinates :** This stores number of test coordinates to be generated as samples to decide for making the split.
-7. **Lambda** This stores the value used for calculating the probabilty which helps to select closer pixels for making the split.
+7. **Lambda :** This stores the value used for calculating the probabilty which helps to select closer pixels for making the split.
 8. **Number of test splits :** This stores the number of test splits to be generated before making the best split.
 
 
@@ -66,3 +66,24 @@ For understanding the code jump to this [page](another-page)
 **The error rate on test images depends on the number of images used for training used as follows :**
 
 ![](test.png)
+
+# [](#header-1)Face landmark detection in an image
+
+![](2.jpg)
+
+This application lets you detect landmarks of detected faces in an image. You can detect landmarks of all the faces found in an image and use them further in various applications like face swapping, face averaging etc.
+This functionality is now available in OpenCV.
+
+```
+// Command to be typed for running the sample
+./sampleDetectLandmarks -file=trained_model.dat -face_cascade=lbpcascadefrontalface.xml -image=/path_to_image/image.jpg
+```
+## [](#header-2)Description of command parameters
+
+> * **model_filename** f : (REQUIRED) A path to binary file storing the trained model which is to be loaded [example - /data/file.dat]
+> * **image** i : (REQUIRED) A path to image in which face landmarks have to be detected.[example - /data/image.jpg]
+> * **face_cascade** c : (REQUIRED) A path to the face cascade xml file which you want to use as a detector.
+
+### [](#header-2)Understanding code
+
+For understanding the code jump to this [page](another-page1)
