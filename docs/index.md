@@ -69,7 +69,7 @@ For understanding the code jump to this [page](another-page)
 
 # [](#header-1)Face landmark detection in an image
 
-![](2.jpg)
+![](facereg.jpg)
 
 This application lets you detect landmarks of detected faces in an image. You can detect landmarks of all the faces found in an image and use them further in various applications like face swapping, face averaging etc.
 This functionality is now available in OpenCV.
@@ -82,8 +82,49 @@ This functionality is now available in OpenCV.
 
 > * **model_filename** f : (REQUIRED) A path to binary file storing the trained model which is to be loaded [example - /data/file.dat]
 > * **image** i : (REQUIRED) A path to image in which face landmarks have to be detected.[example - /data/image.jpg]
-> * **face_cascade** c : (REQUIRED) A path to the face cascade xml file which you want to use as a detector.
+> * **face_cascade** c : (REQUIRED) A path to the face cascade xml file which you want to use as a face detector.
 
 ### [](#header-2)Understanding code
 
 For understanding the code jump to this [page](another-page1)
+
+# [](#header-1)Face landmark detection in a video
+
+         ![](facereg.jpg)
+
+This application lets you detect landmarks of detected faces in a video.This application first detects faces in a current video frame and then finds their facial landmarks. You just have to pass the video as input.	
+
+```
+// Command to be typed for running the sample
+./sampleDetectLandmarks -file=trained_model.dat -face_cascade=lbpcascadefrontalface.xml -video=/path_to_video/video.avi
+```
+## [](#header-2)Description of command parameters
+
+> * **model_filename** f : (REQUIRED) A path to binary file storing the trained model which is to be loaded [example - /data/file.dat]
+> * **video** i : (REQUIRED) A path to video in which face landmarks have to be detected.[example - /data/video.avi]
+> * **face_cascade** c : (REQUIRED) A path to the face cascade xml file which you want to use as a face detector.
+
+### [](#header-2)Understanding code
+
+For understanding the code jump to this [page](another-page2)
+
+# [](#header-1)Face landmark detection in a video
+
+![](facereg.jpg)
+
+This application lets you detect landmarks of detected faces in a video.This application first detects faces in a current video frame and then finds their facial landmarks. You just have to pass the video as input.	
+
+```
+// Command to be typed for running the sample
+./sampleDetectLandmarks -file=trained_model.dat -face_cascade=lbpcascadefrontalface.xml -video=/path_to_video/video.avi
+```
+## [](#header-2)Description of command parameters
+
+> * **model_filename** f : (REQUIRED) A path to binary file storing the trained model which is to be loaded [example - /data/file.dat]
+> * **video** i : (REQUIRED) A path to video in which face landmarks have to be detected.[example - /data/video.avi]
+> * **face_cascade** c : (REQUIRED) A path to the face cascade xml file which you want to use as a face detector.
+
+### [](#header-2)Understanding code
+
+For understanding the code jump to this [page](another-page2)
+
