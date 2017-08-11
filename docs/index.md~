@@ -59,8 +59,10 @@ For understanding the code jump to this [page](another.md)
 ### [](#header-2)Error rate
 
 **The error rate on trained images depends on the number of images used for training used as follows :**
+
 ![](train.png)
 
 **The error rate on test images depends on the number of images used for training used as follows :**
+
 ![](test.png)
 

@@ -40,7 +40,7 @@ The above format is similar to HELEN dataset which is used for training the mode
 The configuration file described above which is used while training contains the training parameters which are required for training.
 
 **The description of parameters is as follows :**
-
+```
 > * **Cascade depth :** This stores the depth of cascade of regressors used for training.
 > * **Tree depth :** This stores the depth of trees created as weak learners during gradient boosting.
 > * **Number of trees per cascade level :** This stores number of trees required per cascade level.
@@ -49,6 +49,7 @@ The configuration file described above which is used while training contains the
 > * **Number of test coordinates :** This stores number of test coordinates to be generated as samples to decide for making the split.
 > * **Lambda** This stores the value used for calculating the probabilty which helps to select closer pixels for making the split.
 > * **Number of test splits :** This stores the number of test splits to be generated before making the best split.
+```
 
 To get more detailed description about the training parameters you can refer to the [Research paper](https://pdfs.semanticscholar.org/d78b/6a5b0dcaa81b1faea5fb0000045a62513567.pdf).
 
@@ -59,8 +60,10 @@ For understanding the code jump to this [page](another.md)
 ### [](#header-2)Error rate
 
 **The error rate on trained images depends on the number of images used for training used as follows :**
+
 ![](train.png)
 
 **The error rate on test images depends on the number of images used for training used as follows :**
+
 ![](test.png)
 
