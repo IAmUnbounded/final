@@ -90,7 +90,7 @@ For understanding the code jump to this [page](another-page1)
 
 # [](#header-1)Face landmark detection in a video
 
-![](facereg.jpg)
+[Link to the video using face landmark detection]()
 
 This application lets you detect landmarks of detected faces in a video.This application first detects faces in a current video frame and then finds their facial landmarks. You just have to pass the video as input.	
 
@@ -106,25 +106,32 @@ This application lets you detect landmarks of detected faces in a video.This app
 
 ### [](#header-2)Understanding code
 
-For understanding the code jump to this [page](another-page2)
+For understanding the code jump to this [page](another-page1)
 
-# [](#header-1)Face landmark detection in a video
+# [](#header-1)Face swapping using face landmark detection using OpenCV.
 
-![](facereg.jpg)
-
-This application lets you detect landmarks of detected faces in a video.This application first detects faces in a current video frame and then finds their facial landmarks. You just have to pass the video as input.	
-
+This application lets you swap a face in one image with another face in other image. The application first detects faces in both images and finds its landmarks. Then it swaps the face in first image with in another image. You just have to give paths to the images run the application to swap the two faces.
 ```
 // Command to be typed for running the sample
-./sampleDetectLandmarks -file=trained_model.dat -face_cascade=lbpcascadefrontalface.xml -video=/path_to_video/video.avi
+./sample_face_swapping -file=trained_model.dat -face_cascade=lbpcascadefrontalface.xml -image1=/path_to_image/image1.jpg -image2=/path_to_image/image2.jpg
 ```
 ## [](#header-2)Description of command parameters
 
-> * **model_filename** f : (REQUIRED) A path to binary file storing the trained model which is to be loaded [example - /data/file.dat]
-> * **video** i : (REQUIRED) A path to video in which face landmarks have to be detected.[example - /data/video.avi]
-> * **face_cascade** c : (REQUIRED) A path to the face cascade xml file which you want to use as a face detector.
+> * **image1** i1 (REQUIRED) Path to the first image file in which you want to apply swapping.
+> * **image2** i2 (REQUIRED) Path to the second image file in which you want to apply face swapping.
+> * **model** m (REQUIRED) Path to the file containing model to be loaded for face landmark detection.
+> * **face_cascade** f (REQUIRED) Path to the face cascade xml file which you want to use as a face detector.
+
+## [](#header-2)
+
+Consider two images to be used for face swapping as follows :
+
+![](28309146.jpg)  ![](100040721_1.jpg)
+
+**Result after swapping**
+
+![](Face_swapped.jpg)
 
 ### [](#header-2)Understanding code
 
 For understanding the code jump to this [page](another-page2)
-
