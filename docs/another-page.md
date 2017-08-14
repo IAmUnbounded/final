@@ -56,6 +56,7 @@ shape of the data which is used as initial shape while training.
 facemark->train(trainimages,trainlandmarks,rectangles,configfile_name,modelfile_name);
 ```
 This call to the train function trains the model and stores the trained model file with the given
-filename specified.As the training starts successfully you will see something like [this](train1.png).
+filename specified.As the training starts successfully you will see something like this :
+![](train1.png)
 
 [back](./)
