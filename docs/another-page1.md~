@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+# [](#header-1)Face landmark detection in a video
+
+This tutorial will explain the sample code for face landmark detection. Jumping directly to the code :
+
+```
+VideoCapture cap(video);
+if(!cap.isOpened()){
+	cerr<<"Video cannot be loaded. Give correct path"<<endl;
+	return -1;
+}
+```
+
+The above code creates a video capture object and then loads the video.
+If the video is not loaded properly it prompts the user else the code proceeds.
+ 
+```
+CascadeClassifier face_cascade;
+face_cascade.load(cascade_name);
+Ptr<FacemarkKazemi> facemark= createFacemarkKazemi(face_cascade);
+facemark->load(filename);
+```
+The above code creates a pointer of the face landmark detection class. A Cascade classifier
+has to be passed to it for detecting faces while landmark detection.
+ 
+
+```
+vector<Rect> faces;
+vector< vector<Point2f> > shapes;
+Mat img;
+```
+The above code creates a vector to store the detected faces and a vector of vector to store shapes for each
+face detected in the current frame.
+
+```
+while(1){
+        faces.clear();
+        shapes.clear();
+        cap>>img;
+        //Detect faces in the current image
+        resize(img,img,Size(600,600));
+        facemark->getFaces(img,faces);
+        if(faces.size()==0){
+            cout<<"No faces found in this frame"<<endl;
+        }
+        else{
+            for( size_t i = 0; i < faces.size(); i++ )
+            {
+                cv::rectangle(img,faces[i],Scalar( 255, 0, 0 ));
+            }
+            //vector to store the landmarks of all the faces in the image
+            shapes.resize(faces.size());
+            if(facemark->getShape(img,faces,shapes))
+            {
+                for(unsigned long i=0;i<faces.size();i++){
+                    for(unsigned long k=0;k<shapes[i].size();k++)
+                        cv::circle(img,shapes[i][k],3,cv::Scalar(0,0,255),FILLED);
+                }
+            }
+        }
+        namedWindow("Detected_shape");
+        imshow("Detected_shape",img);
+        if(waitKey(1) >= 0) break;
+    }
+    
+```
+
+The above code then reads each frame and detects faces and the landmarks corresponding to each shape detected.
+It then displays the current frame.
+
+After running the above code you will get results something like [this](https://youtu.be/dZXKsrApRJk) 
+[back](./)
