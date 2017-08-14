@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+![](d.png)
+
+# [](#header-1)Training face landmark detector
+
+This tutorial will explain the sample code for face landmark detection. Jumping directly to the code :
+
+```
+CascadeClassifier face_cascade;
+Mat img = imread(image);
+face_cascade.load(cascade_name);
+Ptr<FacemarkKazemi> facemark= createFacemarkKazemi(face_cascade);
+facemark->load(filename);
+```
+    
+vector<String> filenames;
+glob(directory,filenames);
+```
+The above code creates a vector filenames for storing the names of the .txt files as described [here](index)
+It gets the filenames of the files in the directory.
+
+```
+CascadeClassifier face_cascade;
+face_cascade.load(cascade_name);
+Ptr<FacemarkKazemi> facemark= createFacemarkKazemi(face_cascade);
+```
+
+The above code creates a pointer to the face landmark detector class.
+A cascade classifier object has to be passed to the face landmark detector class while creating pointer to detect faces.
+
+```
+vector<String> imagenames;
+vector< vector<Point2f> > trainlandmarks;
+vector<Mat> trainimages;
+vector<Rect> rectangles;
+facemark->getData(filenames,trainlandmarks,imagenames);
+for(unsigned long i=0;i<imagenames.size();i++){
+string imgname = imagenames[i].substr(0, imagenames[i].size()-1);
+string img =string(imgname);
+Mat src = imread(img);
+if(src.empty()){
+    cerr<<string("Image"+img+"not found\n.Aborting...")<<endl;
+    return 0;
+}
+trainimages.push_back(src);
+}
+```
+The above code creates std::vectors to store the images and their corresponding landmarks. 
+The above code calls a function getdata to load the landmarks and the images into their respective vectors.
+
+```
+facemark->scaleData(trainlandmarks,trainimages,scale);
+facemark->calcMeanShape(trainlandmarks,trainimages,rectangles);
+```
+The above code scales images and landmarks as training on images of smaller size takes less time.
+This is because processing larger images requires more time. After scaling data it calculates mean
+shape of the data which is used as initial shape while training.
+
+```
+facemark->train(trainimages,trainlandmarks,rectangles,configfile_name,modelfile_name);
+```
+This call to the train function trains the model and stores the trained model file with the given
+filename specified.As the training starts successfully you will see something like this :
+![](train1.png)
+
+[back](./)
