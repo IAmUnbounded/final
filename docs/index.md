@@ -86,7 +86,7 @@ This functionality is now available in OpenCV.
 
 ### [](#header-2)Understanding code
 
-For understanding the code jump to this [page](another-page1)
+For understanding the code jump to this [page](anothe-page1)
 
 # [](#header-1)Face landmark detection in a video
 
