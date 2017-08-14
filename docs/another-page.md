@@ -2,69 +2,60 @@
 layout: default
 ---
 
-![](facereg.jpg)
+![](3.jpg)
 
 # [](#header-1)Training face landmark detector
 
-This application helps to train your own face landmark detector. You can train your own face landmark detection by just providing the paths for
-directory containing the images and files containing their corresponding face landmarks. As this landmark detector was originally trained on
-[HELEN dataset](http://www.ifp.illinois.edu/~vuongle2/helen/), the training follows the format of data provided in HELEN dataset.
+This tutorial will explain the sample code for training face landmark detector. Jumping directly to the code :
 
-The dataset consists of .txt files whose first line contains the image name which then follows the annotations.
-The format of the file containing annotations should be of following format :
-       
->       /directory/images/abc.jpg
->       123.45,345.65
->       321.67,543.89
->       .... , ....
->       .... , ....
-       
-The above format is similar to HELEN dataset which is used for training the model.
+```
+vector<String> filenames;
+glob(directory,filenames);
+```
+The above code creates a vector filenames for storing the names of the .txt files as described [here](index)
+It gets the filenames of the files in the directory.
 
-```js
-// Command to be typed for running the sample
-./sample_train_landmark_detector -annotations=/home/sukhad/Downloads/code/trainset/ -config=config.xml -face_cascade=lbpcascadefrontalface.xml -model=trained_model.dat -width=460 -height=460
+```
+CascadeClassifier face_cascade;
+face_cascade.load(cascade_name);
+Ptr<FacemarkKazemi> facemark= createFacemarkKazemi(face_cascade);
 ```
 
-## [](#header-2)Description of command parameters
+The above code creates a pointer to the face landmark detector class.
+A cascade classifier object has to be passed to the face landmark detector class while creating pointer to detect faces.
 
-> * **annotations** a : (REQUIRED) Path to annotations txt file [example - /data/annotations.txt]
-> * **config** c : (REQUIRED) Path to configuration xml file containing parameters for training.[ example - /data/config.xml]
-> * **model** m :  (REQUIRED) Path to configuration xml file containing parameters for training.[ example - /data/model.dat]
-> * **width** w : (OPTIONAL)  The width which you want all images to get to scale the annotations. Large images are slow to process [default = 460]
-> * **height** h : (OPTIONAL) The height which you want all images to get to scale the annotations. Large images are slow to process [default = 460]
-> * **face_cascade** f (REQUIRED) Path to the face cascade xml file which you want to use as a detector.
+```
+vector<String> imagenames;
+vector< vector<Point2f> > trainlandmarks;
+vector<Mat> trainimages;
+vector<Rect> rectangles;
+facemark->getData(filenames,trainlandmarks,imagenames);
+for(unsigned long i=0;i<imagenames.size();i++){
+string imgname = imagenames[i].substr(0, imagenames[i].size()-1);
+string img =string(imgname);
+Mat src = imread(img);
+if(src.empty()){
+    cerr<<string("Image"+img+"not found\n.Aborting...")<<endl;
+    return 0;
+}
+trainimages.push_back(src);
+}
+```
+The above code creates std::vectors to store the images and their corresponding landmarks. 
+The above code calls a function getdata to load the landmarks and the images into their respective vectors.
 
-### [](#header-2)Description of training parameters
+```
+facemark->scaleData(trainlandmarks,trainimages,scale);
+facemark->calcMeanShape(trainlandmarks,trainimages,rectangles);
+```
+The above code scales images and landmarks as training on images of smaller size takes less time.
+This is because processing larger images requires more time. After scaling data it calculates mean
+shape of the data which is used as initial shape while training.
 
-The configuration file described above which is used while training contains the training parameters which are required for training.
-
-**The description of parameters is as follows :**
-
-1. **Cascade depth :** This stores the depth of cascade of regressors used for training.
-2. **Tree depth :** This stores the depth of trees created as weak learners during gradient boosting.
-3. **Number of trees per cascade level :** This stores number of trees required per cascade level.
-4. **Learning rate :** This stores the learning rate for gradient boosting.This is required to prevent overfitting using shrinkage.
-5. **Oversampling amount :** This stores the oversampling amount for the samples.
-6. **Number of test coordinates :** This stores number of test coordinates to be generated as samples to decide for making the split.
-7. **Lambda** This stores the value used for calculating the probabilty which helps to select closer pixels for making the split.
-8. **Number of test splits :** This stores the number of test splits to be generated before making the best split.
-
-
-To get more detailed description about the training parameters you can refer to the [Research paper](https://pdfs.semanticscholar.org/d78b/6a5b0dcaa81b1faea5fb0000045a62513567.pdf).
-
-### [](#header-2)Understanding code
-
-For understanding the code jump to this [page](another-page)
-
-### [](#header-2)Error rate
-
-**The error rate on trained images depends on the number of images used for training used as follows :**
-
-![](train.png)
-
-**The error rate on test images depends on the number of images used for training used as follows :**
-
-![](test.png)
+```
+facemark->train(trainimages,trainlandmarks,rectangles,configfile_name,modelfile_name);
+```
+This call to the train function trains the model and stores the trained model file with the given
+filename specified.As the training starts successfully you will see something like [this](train1.png).
 
 [back](./)
