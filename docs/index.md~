@@ -101,7 +101,7 @@ This application lets you detect landmarks of detected faces in a video.This app
 ## [](#header-2)Description of command parameters
 
 > * **model_filename** f : (REQUIRED) A path to binary file storing the trained model which is to be loaded [example - /data/file.dat]
-> * **video** i : (REQUIRED) A path to video in which face landmarks have to be detected.[example - /data/video.avi]
+> * **video** v : (REQUIRED) A path to video in which face landmarks have to be detected.[example - /data/video.avi]
 > * **face_cascade** c : (REQUIRED) A path to the face cascade xml file which you want to use as a face detector.
 
 ### [](#header-2)Understanding code
@@ -128,11 +128,11 @@ Consider two images to be used for face swapping as follows :
 
 ### [](#header-3)First image
 
-![](2830279146_1.jpg)
+![](227943776_1.jpg)
 
 ### [](#header-3)Second image
 
-![](100040721_1.jpg)
+![](230501201_1.jpg)
 
 ### [](#header-3)Results after swapping
 

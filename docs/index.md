@@ -128,15 +128,15 @@ Consider two images to be used for face swapping as follows :
 
 ### [](#header-3)First image
 
-![](2830279146_1.jpg)
+![](227943776_1.jpg)
 
 ### [](#header-3)Second image
 
-![](100040721_1.jpg)
+![](230501201_1.jpg)
 
 ### [](#header-3)Results after swapping
 
-![](Face_swapped.jpg)
+![](face_swapped.jpg)
 
 ## [](#header-2)Understanding code
 
