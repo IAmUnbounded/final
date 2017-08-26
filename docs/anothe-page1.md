@@ -8,7 +8,7 @@ layout: default
 
 This tutorial will explain the sample code for face landmark detection. Jumping directly to the code :
 
-```
+```C++
 CascadeClassifier face_cascade;
 Mat img = imread(image);
 face_cascade.load(cascade_name);
