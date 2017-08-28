@@ -67,6 +67,8 @@ For understanding the code jump to this [page](another-page)
 
 ![](test.png)
 
+# [](#header-1)Training face landmark detector(Different data format)
+
 # [](#header-1)Face landmark detection in an image
 
 ![](facereg.jpg)
@@ -136,7 +138,7 @@ Consider two images to be used for face swapping as follows :
 
 ### [](#header-3)Results after swapping
 
-![](Face_swapped.jpg)
+![](face_swapped.jpg)
 
 ## [](#header-2)Understanding code
 
